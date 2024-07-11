@@ -1,0 +1,10 @@
+<div class="app-container container-fluid d-flex align-items-center justify-content-center">
+    <button class="btn toggle-btn" (click)="toggleSidebar()">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="inner-container container d-flex align-items-center ">
+        <app-sidebar class="sidebar" #sidebar [toggleFunction]="toggleSidebar"></app-sidebar>
+        <app-tasks>
+        </app-tasks>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="sidebar">
+  <div class="close-icon">
+    <i class="fa-solid fa-xmark" (click)="callToggleFunction()"></i>
+  </div>
+  <div class="user d-flex align-items-center">
+    <i class="fa-regular fa-circle-user"></i>
+    <div class="user-info">
+      <h6>Do It</h6>
+      <h5>Ahmad Raza</h5>
+    </div>
+  </div>
+  <hr>
+  <ul class="list-unstyled">
+    <li [ngClass]="{ 'active': activeFilter === 'Today' }" (click)="setFilter('Today')">
+      <a href="#">Daily Task</a>
+    </li>
+    <li [ngClass]="{ 'active': activeFilter === 'This Week' }" (click)="setFilter('This Week')">
+      <a href="#">Weekly Task</a>
+    </li>
+    <li [ngClass]="{ 'active': activeFilter === 'This Month' }" (click)="setFilter('This Month')">
+      <a href="#">Monthly Task</a>
+    </li>
+    <li [ngClass]="{ 'active': activeFilter === 'All' }" (click)="setFilter('All')">
+      <a href="#">All Tasks</a>
+    </li>
+
+  </ul>
+  <div class="add-new">
+    <button mat-raised-button (click)="openDialog()">
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+          height="24">
+          <path fill="none" d="M0 0h24v24H0z"></path>
+          <path fill="currentColor"
+            d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+        </svg>
+        Add new task
+      </span>
+    </button>
+  </div>
+</div>

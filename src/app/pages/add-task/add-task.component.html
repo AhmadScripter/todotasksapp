@@ -1,0 +1,60 @@
+<div class="col-md-10 head">
+  <h1 mat-dialog-title>Add New Task</h1>
+  <div mat-dialog-content class="main">
+    <form [formGroup]="taskForm" class="task-form">
+      <div class="form-row">
+        <mat-form-field class="full-width">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field class="full-width">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="category">
+            <mat-option *ngFor="let category of categories" [value]="category">{{category}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+
+      <div class="form-row">
+        <mat-form-field class="full-width">
+          <mat-label>Date</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="date" readonly>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <mat-form-field class="half-width">
+          <mat-label>Time</mat-label>
+          <input matInput type="time" formControlName="time">
+        </mat-form-field>
+      </div>
+
+      <div class="form-row">
+        <div class="checkbox-wrapper">
+          <input id="terms-checkbox-37" name="checkbox" type="checkbox" formControlName="important">
+          <label class="terms-label" for="terms-checkbox-37">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" class="checkbox-svg">
+              <mask fill="white" id="path-1-inside-1_476_5-37">
+                <rect height="200" width="200"></rect>
+              </mask>
+              <rect mask="url(#path-1-inside-1_476_5-37)" stroke-width="40" class="checkbox-box" height="200" width="200"></rect>
+              <path stroke-width="15" d="M52 111.018L76.9867 136L149 64" class="checkbox-tick"></path>
+            </svg>
+            <span class="label-text">Important</span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="onCancel()" class="btn btn-danger">Cancel</button>
+    <button mat-button (click)="onSave()" class="btn btn-primary">Save</button>
+  </div>
+</div>

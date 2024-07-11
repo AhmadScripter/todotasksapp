@@ -1,0 +1,86 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .full-width {
+    flex: 1;
+  }
+
+  .half-width {
+    flex: 1;
+    margin-right: 8px;
+  }
+
+  .half-width:last-child {
+    margin-right: 0;
+  }
+
+  .checkbox-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .checkbox-svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+
+  .label-text {
+    vertical-align: middle;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+.checkbox-wrapper input[type="checkbox"] {
+    display: none;
+  }
+  
+  .checkbox-wrapper .terms-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-wrapper .terms-label .label-text {
+    margin-left: 10px;
+  }
+  
+  .checkbox-wrapper .checkbox-svg {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .checkbox-wrapper .checkbox-box {
+    fill: rgba(207, 205, 205, 0.425);
+    stroke: #8c00ff;
+    stroke-dasharray: 800;
+    stroke-dashoffset: 800;
+    transition: stroke-dashoffset 0.6s ease-in;
+  }
+  
+  .checkbox-wrapper .checkbox-tick {
+    stroke: #8c00ff;
+    stroke-dasharray: 172;
+    stroke-dashoffset: 172;
+    transition: stroke-dashoffset 0.6s ease-in;
+  }
+  
+  .checkbox-wrapper input[type="checkbox"]:checked + .terms-label .checkbox-box,
+    .checkbox-wrapper input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+    stroke-dashoffset: 0;
+  }
+
+  
+button{
+    margin-left: 5px;
+}
